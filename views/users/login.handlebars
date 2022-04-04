@@ -1,0 +1,31 @@
+<body>
+        <h3 class="text-center text-black pt-5">Gerenciamento Escolar</h3>  
+        <br>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="/login" method="POST">
+                            
+                            <div class="form-group">
+                                <label for="username">E-mail:</label><br>
+                                <input type="text" name="email" class="form-control" placeholder="Digite o seu e-mail">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" >Senha:</label><br>
+                                <input type="password" name="password"  class="form-control" placeholder="Digite a sua senha">
+                            </div>
+                            <div class="form-group">
+                                <label for="remember-me"><span>Lembrar-me</span> <span><input name="remember-me" type="checkbox"></span></label><br>
+                                <br>
+                                <input type="submit" class="btn btn-info btn-md btn-warning" value="Entrar">
+                            </div>
+                            <div id="register-link" class="text-right">
+                                <label for="sla">Ainda não possui conta? <a href="/register">Clique Aqui!</a></label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
