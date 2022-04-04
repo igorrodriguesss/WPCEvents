@@ -18,16 +18,27 @@
       <li class="nav-item active">
         <a class="nav-link" href="/">Gerenciamento Escolar</a>
       </li>
+      {{#if session.userid}}
+      <li class="nav-item">
+        <a class="nav-link" href="/Perfil">Perfil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">Sair</a>
+      </li>
+      {{else}}
       <li class="nav-item">
         <a class="nav-link" href="/login">Login</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/register">Registrar</a>
       </li>
+      {{/if}}
     </ul>
   </div>
 </nav>
 <br>
+
+<!-- MENSAGENS DO SISTEMA --> 
 <div class="container">
     {{#if messages.message}}
         <div class="messages">

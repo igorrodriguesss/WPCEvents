@@ -44,14 +44,22 @@ module.exports = class UserController {
             workShifts
         }
 
-        try {
-            await User.create(user)
-
-            res.redirect('/')
+        User.create(user)
+        .then((user) => {
+        // initialize session
+            req.session.userid = user.id
 
             req.flash('message', 'Cadastro realizado com sucesso!')
-            } catch(err) {
-                console.log(err)
-        }
+
+            req.session.save(() => {
+            res.redirect('/')
+            })
+        })
+        .catch((err) => console.log(err))
     } 
+
+    static logout(req, res) {
+        req.session.destroy()
+        res.redirect('/login')
+    }
 }
