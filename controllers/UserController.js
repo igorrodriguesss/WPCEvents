@@ -89,8 +89,17 @@ module.exports = class UserController {
     } 
 
 
-    static configureAccount(req, res) {
+    static async configureAccount(req, res) {
         
+        const userId = req.session.userid
+
+            const user = await User.findOne({ 
+                where: { id: userId }})
+
+            res.render('users/configureAccount', {user})
+
+            return 
+
     }
 
 
