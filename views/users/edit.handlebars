@@ -1,0 +1,17 @@
+
+<H1>Editar meus dados: {{users.name}}</H1>
+<hr>
+<form action="/edit" method="POST">
+<input type="hidden" name="id" value="{{user.id}}"/>
+  <div class="form-group">
+    <label for="name">Nome Cadastrado:</label>
+    <input type="text" class="form-control" id="placeholder-name" name="name" placeholder="{{users.name}}">
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="name">Endereço de email Cadastrado:</label>
+    <input type="email" class="form-control" id="placeholder-email" name="email" placeholder="{{users.email}}">
+  </div>
+  <br>
+  <button type="submit" class="btn btn-danger">Alterar</button>
+</form>

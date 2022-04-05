@@ -89,17 +89,39 @@ module.exports = class UserController {
     } 
 
 
-    static async configureAccount(req, res) {
+    static async updateUser(req, res) {
         
-        const userId = req.session.userid
+            const id = req.params.id
 
-            const user = await User.findOne({ where: { id: userId }, raw: true})
+            const users = await User.findOne({where: { id: id }, raw: true })
 
-            res.render('users/configureAccount', {user})
-
-            return 
+            res.render('users/edit', {users})
 
     }
+
+    static async updateUserSave(req, res) {
+        const userId = req.session.userid 
+
+        const user = {
+            name: req.body.name,
+            email: req.body.email
+        }
+
+        try {
+            await User.update(user, {where: { id: userId }, raw: true })
+
+            req.flash('message', 'Dados atualizados com sucesso!')
+            
+            req.session.save(() => {
+                res.redirect('/')
+            })
+        } catch(error) {    
+            console.log('Aconteceu um erro' + error)
+        }
+    }
+
+
+
 
     static logout(req, res) {
         req.session.destroy()
