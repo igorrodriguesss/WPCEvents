@@ -93,15 +93,13 @@ module.exports = class UserController {
         
         const userId = req.session.userid
 
-            const user = await User.findOne({ 
-                where: { id: userId }})
+            const user = await User.findOne({ where: { id: userId }, raw: true})
 
             res.render('users/configureAccount', {user})
 
             return 
 
     }
-
 
     static logout(req, res) {
         req.session.destroy()

@@ -1,6 +1,17 @@
-<h3>Meus dados</h3>
-{{#each user}}
-{{this.name}}
-{{/each}}
-
-{{this.name}}
+{{#with user}}
+<H1>Meus dados: {{name}}</H1>
+<hr>
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Nome Cadastrado:</label>
+    <input type="email" class="form-control" id="placeholder-name" name="name" placeholder="{{this.name}}">
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Endereço de email Cadastrado:</label>
+    <input type="email" class="form-control" id="placeholder-email" name="email" placeholder="{{this.email}}">
+  </div>
+  <br>
+  <button type="submit" class="btn btn-danger">Alterar</button>
+</form>
+{{/with}}

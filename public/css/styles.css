@@ -26,4 +26,6 @@
   width: 70em;
 }
 
-
+#placeholder-name::placeholder, #placeholder-email::placeholder {
+  color: red;
+}
