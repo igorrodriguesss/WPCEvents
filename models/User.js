@@ -20,12 +20,6 @@ const User = db.define('User', {
         require: true,
         allowNull: true
     },
-
-    workShifts: {
-        type: DataTypes.STRING,
-        require: true,
-        allowNull: true
-    }
 })
 
 module.exports = User

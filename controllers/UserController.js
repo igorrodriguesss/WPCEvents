@@ -42,16 +42,14 @@ module.exports = class UserController {
         })
 }
 
-
-
     static register(req, res) {
         res.render('users/register')
     }
 
     static async registerUser(req, res) {
-        const {name, email, workShifts, password, confirmPassword} = req.body;
+        const {name, email, password, passwordMatch} = req.body;
         
-        if(password != confirmPassword) {
+        if(password != passwordMatch) {
             req.flash('message', 'As senhas não conferem, tente novamente!')
             res.render('users/register')
 
@@ -73,8 +71,7 @@ module.exports = class UserController {
         const user = {
             name,
             password: hashedPassword,
-            email,
-            workShifts
+            email
         }
 
         User.create(user)
@@ -90,6 +87,11 @@ module.exports = class UserController {
         })
         .catch((err) => console.log(err))
     } 
+
+
+    static configureAccount(req, res) {
+        
+    }
 
 
     static logout(req, res) {
