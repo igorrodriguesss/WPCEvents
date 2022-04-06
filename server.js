@@ -10,13 +10,15 @@ const conn = require('./connection/conn')
 
 //Models
 const User = require('./models/User')
+const Event = require('./models/Event')
 
 //UserController
 const UserController = require('./controllers/UserController')
+const EventController = require('./controllers/EventController')
 
 //Rotas
 const userRoutes = require('./routes/userRoutes')
-
+const eventRoutes = require('./routes/eventRoutes')
 
 app.engine("handlebars", exphbs.engine());
 app.set("view engine", "handlebars");
@@ -65,9 +67,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use("/events", eventRoutes)
 app.use("/", userRoutes)
 
-app.get('/', UserController.showHome)
+app.get("/", EventController.showAllEvents)
 
 
 conn

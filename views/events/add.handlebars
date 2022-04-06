@@ -1,0 +1,32 @@
+<div class="container">
+  <h3>Anunciar um Evento</h3>
+<hr>
+
+<form action="/events/add" method="POST">
+<div class="mb-2 col-md-6">
+  <label for="exampleFormControlInput1" class="form-label">Evento:</label>
+  <input type="text" class="form-control" name="name" placeholder="Nome do evento">
+</div>
+
+<div class="mb-2 col-md-6">
+  <label for="exampleFormControlInput1" class="form-label">Cidade:</label>
+  <input type="text" class="form-control" name="city" placeholder="Local do evento">
+</div>
+
+<div class="mb-2 col-md-6">
+<label for="exampleDataList" class="form-label">Evento Privado ?</label>
+<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Escolha...">
+<datalist id="datalistOptions">
+  <option value="Sim">
+  <option value="Não">
+</datalist>
+</div>
+
+<div class="mb-2 col-md-6">
+  <label for="exampleFormControlTextarea1" class="form-label">Descrição:</label>
+  <textarea class="form-control" name="description" rows="2"></textarea>
+  <br>
+  <button type="submit" class="btn btn-outline-warning">Anunciar</button>
+</div>
+</div>
+</form>

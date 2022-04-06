@@ -29,3 +29,15 @@
 #placeholder-name::placeholder, #placeholder-email::placeholder {
   color: red;
 }
+
+.container-addEvent {
+  text-align: 0
+}
+
+.form-control {
+  margin-left: 0em;
+}
+
+.form-labels {
+  margin-left: 0;
+}
