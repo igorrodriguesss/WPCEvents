@@ -1,13 +1,19 @@
 <div class="container">
     <h3>Meus Eventos</h3>
-    
+    <hr>
+    <br>
+
+
+<div class="row gap-3">
     {{#each events}}
-    {{this.name}}
-    <br>
-    {{this.city}}
-    <br>
-    {{this.description}}
-    <br>
-    {{this.private}}
+
+        <div class="card border-warning mb-3" style="width: 16rem;">
+            <div class="card-body">
+                <h5 class="card-title"><strong>{{this.name}}</strong></h5>
+                <h6 class="card-subtitle mb-2 text-muted">Local: {{this.city}}</h6>
+                <br>
+                <a href="/remove"><button type="button" class="btn btn-danger">Deletar</button></a>
+            </div>
+        </div>
     {{/each}}
 </div>
