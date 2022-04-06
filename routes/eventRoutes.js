@@ -4,10 +4,11 @@ const router = express.Router();
 const checkAuth = require('../helpers/auth').checkAuth
 const EventController = require('../controllers/EventController')
 
-router.get('/', EventController.showAllEvents)
+router.get('/', checkAuth, EventController.showAllEvents)
+router.get('/showEvent', checkAuth, EventController.showEvent)
 
-router.get('/add', EventController.createEvent)
-router.post('/add', EventController.createEventSave)
+router.get('/add', checkAuth, EventController.createEvent)
+router.post('/add', checkAuth, EventController.createEventSave)
 
 
 module.exports = router

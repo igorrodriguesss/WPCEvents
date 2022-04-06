@@ -1,7 +1,7 @@
 const express = require('express')
 const { get } = require('express/lib/response')
 const router = express.Router()
-const chechAuth = require('../helpers/auth').checkAuth
+const checkAuth = require('../helpers/auth').checkAuth
 const UserController = require('../controllers/UserController')
 
 router.get('/', UserController.showHome)

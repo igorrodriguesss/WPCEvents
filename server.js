@@ -70,7 +70,7 @@ app.use((req, res, next) => {
 app.use("/events", eventRoutes)
 app.use("/", userRoutes)
 
-app.get("/", EventController.showAllEvents)
+app.get('/', EventController.showAllEvents)
 
 
 conn
