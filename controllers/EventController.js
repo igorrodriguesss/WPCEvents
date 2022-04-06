@@ -51,6 +51,22 @@ module.exports = class EventController {
             res.render('events/showEvent', {events})
         }
 
+        static async removeEvent(req, res) {
 
+            const id = req.body.id
+            const UserId = req.session.userid
 
-}
+            try {
+                await Event.destroy({where: {id: id, UserId: UserId}})
+
+                req.flash('message', 'Evento excluido com sucesso!')
+                    
+                req.session.save(() => {
+                res.redirect('/')
+                
+            })
+                } catch(error) {    
+                    console.log('Aconteceu um erro' + error)
+            }
+        }
+    }
