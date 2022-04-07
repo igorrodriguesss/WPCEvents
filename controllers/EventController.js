@@ -2,6 +2,7 @@ const Event = require('../models/Event')
 const User = require('../models/User')
 
 
+
 module.exports = class EventController {
     static async showAllEvents(req, res) {
         res.render('home')
@@ -18,8 +19,11 @@ module.exports = class EventController {
             name: req.body.name,
             city: req.body.city,
             private: false,
+            items: req.body.items,
+            image: req.file,
             description: req.body.description
         }
+
 
         try {
             await Event.create(event) //

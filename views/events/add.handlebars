@@ -2,22 +2,53 @@
   <h3>Anunciar um Evento</h3>
 <hr>
 
-<form action="/events/add" method="POST">
+<form action="/events/add" enctype="multipart/form-data" method="POST">
+
+  <div class="form-group">
+    <label for="exampleFormControlFile1"><strong>Imagem do Evento</strong></label>
+    <input type="file" class="form-control-file" name="image">
+  </div>
+
 <div class="mb-2 col-md-6">
-  <label for="exampleFormControlInput1" class="form-label">Evento:</label>
+  <label for="exampleFormControlInput1" class="form-label"><strong>Evento:</strong></label>
   <input type="text" class="form-control" name="name" placeholder="Nome do evento">
 </div>
 
 <div class="mb-2 col-md-6">
-  <label for="exampleFormControlInput1" class="form-label">Cidade:</label>
+  <label for="exampleFormControlInput1" class="form-label"><strong>Cidade:</strong></label>
   <input type="text" class="form-control" name="city" placeholder="Local do evento">
 </div>
-
-<label for="private">Evento Privado?</label>
+<div class="mb-2 col-md-6">
+<label for="private"><strong>Evento Privado?</strong></label>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" name="private" value="" id="flexCheckDefault">
     <span>Sim</span>
+    <br>
   </label>
+</div>
+</div>
+
+<div class="mb-2 col-md-6">
+<label for="exampleFormControlInput1" class="form-label"><strong>Itens da infraestrutura do evento:</strong></label>
+<div class="form-check form-switch">
+  <label class="form-check-label" for="flexSwitchCheckDefault">Mesas</label>
+  <input class="form-check-input" type="checkbox" name="items[]" value="Mesas">
+</div>
+
+<div class="form-check form-switch">
+  <label class="form-check-label" for="flexSwitchCheckDefault">Open bar</label>
+  <input class="form-check-input" type="checkbox" name="items[]" value="OpenBar">
+</div>
+
+<div class="form-check form-switch">
+  <label class="form-check-label" for="flexSwitchCheckDefault">Open Food</label>
+  <input class="form-check-input" type="checkbox" name="items[]" value="OpenFood">
+</div>
+
+<div class="form-check form-switch">
+  <label class="form-check-label" for="flexSwitchCheckDefault">Banheiro Publico</label>
+  <input class="form-check-input" type="checkbox" name="items[]" value="Banheiro">
+</div>
 </div>
 
 <div class="mb-2 col-md-6">

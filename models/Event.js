@@ -23,6 +23,13 @@ const Event = db.define('Event',{
     private: {
         type: DataTypes.BOOLEAN,
         allowNull: true
+    },
+    items: {
+        type: DataTypes.JSON,
+        allowNull: true
+    },
+    image: {
+        type: DataTypes.STRING,
     }
 })
 
