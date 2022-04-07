@@ -12,7 +12,10 @@
                 <h5 class="card-title"><strong>{{this.name}}</strong></h5>
                 <h6 class="card-subtitle mb-2 text-muted">Local: {{this.city}}</h6>
                 <br>
-                <a href="/remove"><button type="button" class="btn btn-danger">Deletar</button></a>
+                <form action="/events/remove" method="POST">
+                        <input type="hidden" name="id" value="{{this.id}}">
+                        <button type="submit" class="btn btn-danger">Deletar</button>
+                    </form>
             </div>
         </div>
     {{/each}}
