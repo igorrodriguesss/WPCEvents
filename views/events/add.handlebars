@@ -2,7 +2,13 @@
   <h3>Anunciar um Evento</h3>
 <hr>
 
-<form action="/events/add" method="POST">
+<form action="/events/add" enctype="multipart/form-data" method="POST">
+
+<div class="form-group">
+    <label for="exampleFormControlFile1" name="image">Escolha Imagem do Evento</label>
+    <input type="file" class="form-control-file" id="image" name="image">
+  </div>
+
 <div class="mb-2 col-md-6">
   <label for="exampleFormControlInput1" class="form-label">Evento:</label>
   <input type="text" class="form-control" name="name" placeholder="Nome do evento">

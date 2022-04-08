@@ -18,6 +18,7 @@ module.exports = class EventController {
             name: req.body.name,
             city: req.body.city,
             private: false,
+            image: req.file,
             description: req.body.description
         }
 

@@ -23,6 +23,9 @@ const Event = db.define('Event',{
     private: {
         type: DataTypes.BOOLEAN,
         allowNull: true
+    },
+    image: {
+        type: DataTypes.STRING,
     }
 })
 
