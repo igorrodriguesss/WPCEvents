@@ -6,18 +6,17 @@
 
 <div class="row gap-3">
     {{#each events}}
-
-        <div class="card border-warning mb-3" style="width: 15rem; margin-left: 60px;">
+        <div class="card border-warning mb-3" style="width: 13rem; margin-left: 60px; background-color: white">
+            <img src="/img/imgEventos/{{this.image}}" style='width: 100%; height: 50%' class="card-img-top">
             <div class="card-body">
-                <h5 class="card-title"><strong>{{this.name}}</strong></h5>
-                <h6 class="card-subtitle mb-2 text-muted">Local: {{this.city}}</h6>
-                <img src="/img/imgEventos/{{this.image}}">
-                <br>
-                <form action="/events/remove" method="POST">
+                <h5 class="card-title">{{this.name}}</h5>
+                <hr>
+                <p class="card-text"><strong>Local:</strong>{{this.city}}</p>
+                    <form action="/events/remove" method="POST">
                         <input type="hidden" name="id" value="{{this.id}}">
                         <button type="submit" class="btn btn-danger">Deletar</button>
                     </form>
+                </div>
             </div>
-        </div>
     {{/each}}
 </div>

@@ -4,6 +4,7 @@ const router = express.Router();
 
 const checkAuth = require('../helpers/auth').checkAuth
 const EventController = require('../controllers/EventController')
+const UserController = require('../controllers/UserController')
 
 const multer = require('multer');
     const storage = multer.diskStorage({
@@ -19,7 +20,9 @@ const multer = require('multer');
     const upload = multer({ storage: storage })
 
 
-router.get('/', EventController.showAllEvents)
+
+//router.get('/',EventController.showHome)
+
 
 router.get('/', EventController.showAllEvents)
 router.get('/showEvent', checkAuth, EventController.showEvent)

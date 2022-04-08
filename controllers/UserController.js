@@ -1,11 +1,17 @@
 const User =  require('../models/User')
+const Event = require('../models/Event')
 
 const bcrypt = require('bcryptjs')
 
 
 module.exports = class UserController {
-    static showHome(req, res) {
-        res.render('users/home')
+    static async showHome(req, res) {
+        const eventsData = await Event.findAll({
+            include: User,
+        })
+
+        const events = eventsData.map((result => result.get({plain: true})))
+        res.render('users/home', { events })
     }
     
     static login(req, res) {
@@ -119,9 +125,6 @@ module.exports = class UserController {
             console.log('Aconteceu um erro' + error)
         }
     }
-
-
-
 
     static logout(req, res) {
         req.session.destroy()
