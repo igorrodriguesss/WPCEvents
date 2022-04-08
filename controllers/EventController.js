@@ -20,10 +20,9 @@ module.exports = class EventController {
             city: req.body.city,
             private: false,
             items: req.body.items,
-            image: req.file,
+            image: req.file.filename,
             description: req.body.description
         }
-
 
         try {
             await Event.create(event) //

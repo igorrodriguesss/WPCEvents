@@ -7,11 +7,11 @@
 <div class="row gap-3">
     {{#each events}}
 
-        <div class="card border-warning mb-3" style="width: 16rem;">
+        <div class="card border-warning mb-3" style="width: 15rem; margin-left: 60px;">
             <div class="card-body">
                 <h5 class="card-title"><strong>{{this.name}}</strong></h5>
                 <h6 class="card-subtitle mb-2 text-muted">Local: {{this.city}}</h6>
-                <h6 class="card-subtitle mb-2 text-muted">Local: {{this.items}}</h6>
+                <img src="/img/imgEventos/{{this.image}}">
                 <br>
                 <form action="/events/remove" method="POST">
                         <input type="hidden" name="id" value="{{this.id}}">

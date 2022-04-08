@@ -49,7 +49,7 @@ module.exports = class UserController {
     static async registerUser(req, res) {
         const {name, email, password, passwordMatch} = req.body;
         
-        if(password != passwordMatch) {
+        if (password != passwordMatch) {
             req.flash('message', 'As senhas não conferem, tente novamente!')
             res.render('users/register')
 
