@@ -1,33 +1,17 @@
-<div class="container">
-<div id="carouselExampleIndicators" class="carouse"></div>
-  <div class="carousel-inner">
-    <div class="carousel active">
-        <div class="imagem">
-        <img src="/img/teste.jpg" class="d-block w-100" alt="...">
-        </div>
-      <h3>
-    </div>
+<h3 style="text-align:center;">Eventos Anunciados</h3>
+<hr>
 
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="visually-hidden">Previous</span>
-  </button>
-    <span class="visually-hidden">Next</span>
-  </button>
-  <hr>
-      <div class="row gap-3">
-      <h3 style="text-align: center;">Todos Eventos</h3>
+<div class="row gap-3">
       {{#each events}}
-         <div class="card border-warning mb-3" style="width: 14rem; margin-left: 60px; background-color: white">
+         <div class="card border-dark mb-2" style="width: 14rem; margin-left: 70px; background-color: white">
             <img src="/img/imgEventos/{{this.image}}" style='width: 100%; height: 50%' class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title">{{this.name}}</h5>
                 <hr>
                 <p class="card-text"><strong>Local:</strong>{{this.city}}</p>
-                <a href="/events/saberMais"><button type="text" class="btn btn-outline-warning">Saber Mais</button></a>
+                <a href="/events/saberMais"><button type="text" class="btn btn-outline-danger">Saber Mais</button></a>
                 </div>
             </div>
       {{/each}}
   </div>
-</div>
-</div>
+  </div>

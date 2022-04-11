@@ -1,22 +1,39 @@
+<h1 class="title-info">Meus Eventos</h1>
+<hr>
+<div class="tabela">
 <div class="container">
-    <h3>Meus Eventos</h3>
-    <hr>
-    <br>
-
-
-<div class="row gap-3">
-    {{#each events}}
-        <div class="card border-warning mb-3" style="width: 13rem; margin-left: 60px; background-color: white">
-            <img src="/img/imgEventos/{{this.image}}" style='width: 100%; height: 50%' class="card-img-top">
-            <div class="card-body">
-                <h5 class="card-title">{{this.name}}</h5>
-                <hr>
-                <p class="card-text"><strong>Local:</strong>{{this.city}}</p>
-                    <form action="/events/remove" method="POST">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome do Evento</th>
+            <th scope="col">Local do Evento</th>
+            <th scope="col">Descrição do Evento</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+            {{#each events}}
+          <tr>
+            <th scope="row">{{this.id}}</th>
+            <td>{{this.name}}</td>
+            <td>{{this.city}}</td>
+            <td>{{this.description}}</td>
+            <td>
+              <form action="/events/remove" method="POST">
                         <input type="hidden" name="id" value="{{this.id}}">
-                        <button type="submit" class="btn btn-danger">Deletar</button>
-                    </form>
-                </div>
-            </div>
-    {{/each}}
+                        <button type="button" class="btn btn-danger">Excluir<i class="fas fa-edit"></i></button>
+              </form>          
+  
+            </td>
+          </tr>
+          <tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 </div>

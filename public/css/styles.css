@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
 * {
-    font-family: Helvetica, sans-serif;
+    font-family: 'Courier Prime', monospace;
     margin: 0;
     padding: 0;
   }
@@ -9,7 +11,7 @@
 .messages {
   padding: 1em;
   color: White;
-  background-color: #ffc107;
+  background-color: #FF4500;
   border: 1px solid #b8daff;
   border-radius: 5px;
   text-align: center;
