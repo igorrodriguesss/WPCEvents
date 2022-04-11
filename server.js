@@ -55,7 +55,6 @@ app.use(
 app.use(flash());
 
 app.use(express.static("public"));
-app.use('./Images', express.static('Images'))
 
 // set session to res
 app.use((req, res, next) => {

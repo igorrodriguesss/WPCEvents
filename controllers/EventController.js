@@ -20,7 +20,7 @@ module.exports = class EventController {
             city: req.body.city,
             private: false,
             items: req.body.items,
-            image: req.filename,
+            image: req.file.filename,
             description: req.body.description
         }
 
@@ -66,7 +66,7 @@ module.exports = class EventController {
                 req.flash('message', 'Evento excluido com sucesso!')
                     
                 req.session.save(() => {
-                res.redirect('/')
+                res.redirect('/events/showEvent')
                 
             })
                 } catch(error) {    

@@ -20,7 +20,6 @@ const multer = require('multer');
     const upload = multer({ storage: storage })
 
 
-
 //router.get('/',EventController.showHome)
 
 
