@@ -24,7 +24,7 @@ module.exports = class EventController {
             description: req.body.description
         }
 
-        if(!event.image) {
+        if(!req.file.filename) {
             req.flash('message', 'Por favor inserir uma imagem do evento!')
             res.render('events/add')
 

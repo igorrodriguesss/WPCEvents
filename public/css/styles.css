@@ -4,17 +4,7 @@
   font-family: 'Anek Odia', sans-serif;
   }
   
-body{
-  min-height: 100vh;
-  padding-bottom: 100px;
-  position: relative;
-  background-color: whitesmoke;
-}
 
-header {
-  background-color: #fff;
-  border-bottom: 1px solid #ccc;
-}
 
 .row {
   margin: 0;
@@ -24,9 +14,6 @@ header {
   padding: 0;
 }
 
-
-
-
 .messages {
   padding: 1em;
   color: White;
@@ -34,7 +21,7 @@ header {
   border: 1px solid #b8daff;
   border-radius: 5px;
   text-align: center;
-  margin: 0 auto 0.5em;
+  margin: 10px auto 0.5em;
   max-width: 60%;
 }
 
@@ -65,5 +52,5 @@ header {
 
 .card {
   color: black;
-  border-radius: 10px;
+  border-radius: 12px;
 }
