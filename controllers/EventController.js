@@ -24,6 +24,26 @@ module.exports = class EventController {
             description: req.body.description
         }
 
+        if(!event.image) {
+            req.flash('message', 'Por favor inserir uma imagem do evento!')
+            res.render('events/add')
+
+            return
+        }
+
+         if(!event.name && !event) {
+            req.flash('message', 'Usuário em branco, tente novamente!')
+            res.render('events/add')
+
+            return
+        }
+
+        if(!event.city) {
+            req.flash('message', 'É necessario inserir uma cidade!')
+            res.render('events/add')
+
+            return
+        }
 
         try {
             await Event.create(event) //
