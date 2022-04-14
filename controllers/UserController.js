@@ -3,6 +3,9 @@ const Event = require('../models/Event')
 
 const bcrypt = require('bcryptjs')
 
+const { Op } = require('sequelize')
+
+
 
 module.exports = class UserController {
     static async showHome(req, res) {

@@ -23,7 +23,7 @@ const multer = require('multer');
 //router.get('/',EventController.showHome)
 
 
-router.get('/', EventController.showAllEvents)
+router.get('/', checkAuth, EventController.showAllEvents)
 router.get('/showEvent', checkAuth, EventController.showEvent)
 
 router.get('/add', checkAuth, EventController.createEvent)

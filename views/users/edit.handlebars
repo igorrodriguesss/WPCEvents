@@ -1,5 +1,5 @@
-
-<H3>Editar meus dados: {{users.name}}</H3>
+<div class="container">
+<H3 style="margin-top: 10px;">Editar meus dados: {{users.name}}</H3>
 <hr>
 <form action="/edit" method="POST">
 <input type="hidden" name="id" value="{{user.id}}"/>
@@ -15,3 +15,4 @@
   <br>
   <button type="submit" class="btn btn-outline-danger">Alterar</button>
 </form>
+</div>  
