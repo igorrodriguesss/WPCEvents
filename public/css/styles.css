@@ -3,8 +3,6 @@
 * {
   font-family: 'Anek Odia', sans-serif;
   }
-  
-
 
 .row {
   margin: 0;
@@ -53,4 +51,8 @@
 .card {
   color: black;
   border-radius: 12px;
+}
+
+h3 {
+  margin-top: 10px;
 }
