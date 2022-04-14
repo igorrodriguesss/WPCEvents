@@ -5,9 +5,32 @@ const User = require('../models/User')
 
 module.exports = class EventController {
     static async showAllEvents(req, res) {
-        res.render('events/home')
+        const userId = req.session.userid
+
+            const user = await User.findOne({
+                where: { 
+                    id: id
+                }, 
+                include: Event,
+                plain: true,
+            })
+
+            const events = user.Events.map((result) => result.dataValues)
+
+            res.render('events/showEvent', {events})
     }
     
+    static async eventInformation(req, res) {
+        
+            
+            const event = await Event.findOne({where: {id:id}, raw: true})
+    
+
+            res.render('events/information', {eventos: event})
+
+    }
+ 
+
     static async createEvent(req, res) {
         res.render('events/add')
     }

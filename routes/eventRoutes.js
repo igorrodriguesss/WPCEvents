@@ -26,6 +26,8 @@ const multer = require('multer');
 router.get('/', checkAuth, EventController.showAllEvents)
 router.get('/showEvent', checkAuth, EventController.showEvent)
 
+router.get('/information', EventController.eventInformation)
+
 router.get('/add', checkAuth, EventController.createEvent)
 router.post('/add', upload.single('image'), checkAuth, EventController.createEventSave)
 

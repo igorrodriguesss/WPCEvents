@@ -4,7 +4,7 @@ const router = express.Router()
 const checkAuth = require('../helpers/auth').checkAuth
 const UserController = require('../controllers/UserController')
 
-router.get('/', UserController.showHome)
+router.get('/', checkAuth, UserController.showHome)
 
 router.get('/login', UserController.login)
 router.post('/login', UserController.loginUser)
