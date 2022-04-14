@@ -9,8 +9,18 @@ const { Op } = require('sequelize')
 
 module.exports = class UserController {
     static async showHome(req, res) {
+
+        let search = ''
+
+        if(req.query.search) {
+            search = req.query.search
+        }
+
         const eventsData = await Event.findAll({
             include: User,
+            where: {
+                name: {[Op.like]: `%${search}%` }
+            }
         })
 
         const events = eventsData.map((result => result.get({plain: true})))
