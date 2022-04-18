@@ -22,13 +22,13 @@ module.exports = class EventController {
     
     static async eventInformation(req, res) {
         
-            
-            const event = await Event.findOne({where: {id:id}, raw: true})
-    
+        const id = req.params.id
 
-            res.render('events/information', {eventos: event})
+        const events = await Event.findOne({where: { id: id }, raw: true })
 
-    }
+        res.render('events/views', {events})
+
+}
  
 
     static async createEvent(req, res) {
