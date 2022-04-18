@@ -2,17 +2,15 @@
 
 <div class="tabela">
 <div class="container">
-  <h3 style="margin-top:8px "class="title-info">Meus Eventos</h3>
-  <hr>
+  <h3 style="margin-top:20px "class="title-info">Meus Eventos</h3>
   <div class="row">
     <div class="col-12">
-      <table class="table table-hover table-bordered">
+      <table class="table table-hover ">
         <thead>
           <tr>
-            <th scope="col">ID</th>
+            <th scope="col">#</th>
             <th scope="col">Nome do Evento</th>
             <th scope="col">Local do Evento</th>
-            <th scope="col">Descrição do Evento</th>
             <th scope="col">Itens</th>
             <th scope="col">Ações</th>
           </tr>
@@ -23,13 +21,12 @@
             <th scope="row">{{this.id}}</th>
             <td>{{this.name}}</td>
             <td>{{this.city}}</td>
-            <td>{{this.description}}</td>
             <td>{{this.items}}</td>
 
             <td>
               <form action="/events/remove" method="POST">
                         <input type="hidden" name="id" value="{{this.id}}">
-                        <button type="submit" class="btn btn-danger">Excluir<i class="fas fa-edit"></i></button>
+                        <button type="submit" class="btn btn-danger"><i class="bi bi-trash"></i> Excluir</button>
               </form>          
             </td>
           </tr>

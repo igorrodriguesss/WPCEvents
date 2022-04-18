@@ -24,7 +24,15 @@ module.exports = class EventController {
         
         const id = req.params.id
 
-        const events = await Event.findOne({where: { id: id }, raw: true })
+        const events = await Event.findOne({
+            where: { 
+                id: id 
+            },
+                 raw: true, 
+                 plain: true, 
+                 include: User 
+        })
+
 
         res.render('events/views', {events})
 

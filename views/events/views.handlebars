@@ -1,4 +1,21 @@
-<h4>{{events.id}}</h4>
-
-<h3>{{events.name}}</h3>
-
+<div class="container-1">
+    <div class="col-md-10 offset-md-1">
+        <div class="row">
+            <div id="img-container" class="col-md-6">
+                <img src="/img/imgEventos/{{events.image}}" class="img-fluid">
+            </div>
+            <div id="info-container" class="col-md-6">
+                <h1>{{events.name}}</h1>
+                <p class="event-city"><i class="bi bi-geo-alt-fill"></i> {{events.city}}</p>
+                <p class="event-participants"><i class="bi bi-people-fill"></i> X Participantes</p>
+                <p class="event-owner"><i class="bi bi-star-fill"></i> {{events.UserId}}</p>
+                <H5>Evento conta com:</H5>
+                <p class="event-owner"><i class="bi bi-play-fill"></i> {{events.items}}</p>
+                <a href="#" class="btn btn-outline-danger">Confirmar Presença</a>
+             </div>
+            <div class="col-md-12" id="description-container">
+                <h3>Sobre o evento:</h3>
+                <p id="event-description">{{events.description}}</p>
+            </div>
+        </div>
+    </div>
