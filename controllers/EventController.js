@@ -17,27 +17,31 @@ module.exports = class EventController {
 
             const events = user.Events.map((result) => result.dataValues)
 
+
+
             res.render('events/showEvent', {events})
     }
-    
-    static async eventInformation(req, res) {
+
         
-        const id = req.params.id
-
-        const events = await Event.findOne({
-            where: { 
-                id: id 
-            },
-                 raw: true, 
-                 plain: true, 
-                 include: User 
-        })
-
-
-        res.render('events/views', {events})
-
-}
- 
+        static async eventInformation(req, res) {
+        
+            const id = req.params.id
+    
+            const events = await Event.findOne({
+                where: { 
+                    id: id 
+                },
+                     raw: true, 
+                     plain: true
+            })
+    
+            if(typeof events.items != 'object'){
+               events.items = JSON.parse(events.items)
+            }
+    
+            res.render('events/views', {events})
+    
+    }
 
     static async createEvent(req, res) {
         res.render('events/add')
@@ -100,8 +104,13 @@ module.exports = class EventController {
                 include: Event,
                 plain: true,
             })
-
-            const events = user.Events.map((result) => result.dataValues)
+            const events = user.Events.map((result) => {
+               console.log(typeof result.dataValues.items)
+               if(typeof result.dataValues.items!='object'){
+                  result.dataValues.items = JSON.parse(result.dataValues.items)
+               }
+               return result.dataValues
+            })
 
             res.render('events/showEvent', {events})
         }

@@ -10,8 +10,10 @@
                 <p class="event-participants"><i class="bi bi-people-fill"></i> X Participantes</p>
                 <p class="event-owner"><i class="bi bi-star-fill"></i> {{events.UserId}}</p>
                 <H5>Evento conta com:</H5>
-                
-                <p class="event-owner">{{this.items}}</p>
+                {{#each events.items}}
+                    <p class="event-owner"><i class="bi bi-play-fill"></i> {{this}}</p>
+                {{/each}}
+               
                
                 <a href="#" class="btn btn-outline-danger">Confirmar Presença</a>
              </div>

@@ -21,11 +21,7 @@
             <th scope="row">{{this.id}}</th>
             <td>{{this.name}}</td>
             <td>{{this.city}}</td>
-            <td>
-              {{#each this.items}}
-              <p>{{this}}</p>
-              {{/each}}
-            </td>
+            <td>{{this.items}}</td>
 
             <td>
               <form action="/events/remove" method="POST">

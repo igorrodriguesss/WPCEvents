@@ -26,7 +26,6 @@ const Event = db.define('Event',{
     },
     items: {
         type: DataTypes.JSON,
-        allowNull: true
     },
     image: {
         type: DataTypes.STRING,
