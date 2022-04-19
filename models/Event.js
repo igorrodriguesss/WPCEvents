@@ -36,4 +36,7 @@ const Event = db.define('Event',{
 Event.belongsTo(User)
 User.hasMany(Event)
 
+
+
+
 module.exports = Event
