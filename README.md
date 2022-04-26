@@ -34,7 +34,11 @@ session-file-store <br>
 <img width="960" alt="eventos" src="https://user-images.githubusercontent.com/48895884/165344176-a1ffbc1b-f953-4128-b2ea-8a389b8f8864.PNG">
 <p>Tela para editar seus dados cadastrais</p>
 <img width="960" alt="edit" src="https://user-images.githubusercontent.com/48895884/165344312-b00085e7-fd3a-4bed-a236-dc4f84a24e7b.PNG">
-<p>Tela para editar seus dados cadastrais</p>
+<p>Tela para visualizar as informações de um evento</p>
+<img width="960" alt="tela-full" src="https://user-images.githubusercontent.com/48895884/165344718-02e373c5-38c4-4048-81f2-79665b701d6f.PNG">
+<p>Tela do funcionamento do campo de busca</p>
+<img width="960" alt="Capturar" src="https://user-images.githubusercontent.com/48895884/165344948-70ca5517-bf5f-46ca-9559-ac8b339d1012.PNG">
+
 
 
 ### Objetivo do projeto: 
