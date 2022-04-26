@@ -18,21 +18,25 @@ session-file-store <br>
 <hr>
 
 <h3>Telas do Projeto</h3>
-<p> Tela de Dashboard
-<img width="960" alt="LOGIN" src="https://user-images.githubusercontent.com/48895884/165343480-c20ed3cc-c932-45d7-ae39-c11a5bc35f33.PNG">
 
 <p>Tela de login</p>
-<img src="https://user-images.githubusercontent.com/48895884/162350669-ea80b0da-f37a-49c6-8062-462d3e80c5a1.png">
+<img width="960" alt="LOGIN" src="https://user-images.githubusercontent.com/48895884/165343480-c20ed3cc-c932-45d7-ae39-c11a5bc35f33.PNG">
+
 <p>Tela de Cadastro</p>
-<img src="https://user-images.githubusercontent.com/48895884/162349768-9a1636cc-f793-494a-bfd9-ad1756a48918.png">
-<p>Tela de Dashboard ao se cadastrar</p>
-<img src="https://user-images.githubusercontent.com/48895884/162349923-de9f0474-e108-4917-8e56-30b958bfd88b.png">
-<p>Tela para criar pensamento</p>
-<img src="https://user-images.githubusercontent.com/48895884/162350027-55b4e450-0b8e-47ec-93be-795292613dfb.png">
-<p>Tela para administrar meus pensamentos criados</p>
-<img src="https://user-images.githubusercontent.com/48895884/162350148-8ead517c-5c64-4cdf-a0dd-1eb2f1b1c893.png">
-<p>Tela para ver pensamentos de todos os usuários</p>
-<img src="https://user-images.githubusercontent.com/48895884/162350263-e2aa0b78-84fd-4ec8-87ac-b860307c9599.png">
+<img width="960" alt="REGISTRO" src="https://user-images.githubusercontent.com/48895884/165343722-6da3d40a-3fb3-49e3-8c53-17828d00da12.PNG">
+<p>Dashboard</p>
+<img width="960" alt="dashboard1" src="https://user-images.githubusercontent.com/48895884/165343874-a7cb815a-34c0-4516-9d99-517a91dac7b8.PNG">
+<p>Dashboard 2</p>
+<img width="960" alt="dash2" src="https://user-images.githubusercontent.com/48895884/165343951-bfd9bc9b-cbfa-4521-8ea0-93042a8c5798.PNG">
+<p>Tela para criar eventos</p>
+<img width="960" alt="criarevento" src="https://user-images.githubusercontent.com/48895884/165344066-f437e511-531c-4c61-b305-8120c0d4c4a7.PNG">
+<p>Tela para visualizar os seus eventos</p>
+<img width="960" alt="eventos" src="https://user-images.githubusercontent.com/48895884/165344176-a1ffbc1b-f953-4128-b2ea-8a389b8f8864.PNG">
+<p>Tela para editar seus dados cadastrais</p>
+<img width="960" alt="edit" src="https://user-images.githubusercontent.com/48895884/165344312-b00085e7-fd3a-4bed-a236-dc4f84a24e7b.PNG">
+<p>Tela para editar seus dados cadastrais</p>
+
+
 ### Objetivo do projeto: 
 
 <p> Objetivo do projeto consistiu em criar uma pequena aplicação Web que possibilitasse a criação de um usuario em que ele pudesse adicionar eventos, excluir seus próprios eventos e participar de outros evento.</p>
