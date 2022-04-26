@@ -19,7 +19,8 @@ session-file-store <br>
 
 <h3>Telas do Projeto</h3>
 <p> Tela de Dashboard
-<img src="https://user-images.githubusercontent.com/48895884/162349470-aa0e8025-011f-4890-b8d8-b1aaebedb37f.png">
+<img width="960" alt="LOGIN" src="https://user-images.githubusercontent.com/48895884/165343480-c20ed3cc-c932-45d7-ae39-c11a5bc35f33.PNG">
+
 <p>Tela de login</p>
 <img src="https://user-images.githubusercontent.com/48895884/162350669-ea80b0da-f37a-49c6-8062-462d3e80c5a1.png">
 <p>Tela de Cadastro</p>
