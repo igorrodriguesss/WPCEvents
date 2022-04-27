@@ -1,4 +1,4 @@
-## Projeto Toughts 
+## Projeto WPCEventos 
 
 
 <h3> Dependências usadas no projeto.</h3>
